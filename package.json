@@ -1,0 +1,25 @@
+{
+  "name": "openbot-plugin-gemini-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Gemini CLI plugin for OpenBot",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "esbuild index.ts --bundle --platform=node --format=esm --outfile=dist/index.js --external:melony --external:zod",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "melony": "^0.3.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.1",
+    "esbuild": "^0.21.0",
+    "zod": "^4.3.5"
+  }
+}
