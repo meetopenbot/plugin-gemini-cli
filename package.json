@@ -1,9 +1,12 @@
 {
   "name": "@meetopenbot/gemini-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Gemini CLI plugin for OpenBot",
   "main": "./dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": "./dist/index.js"
   },
